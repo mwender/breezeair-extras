@@ -11,6 +11,8 @@
  *
  * @package         BreezeAir_Extras
  */
+define( 'BREEZE_DIR_PATH', plugin_dir_path( __FILE__ ) );
+define( 'BREEZE_DIR_URL', plugin_dir_url( __FILE__ ) );
 
 // Include required files
 require_once( 'lib/fns/enqueues.php' );
