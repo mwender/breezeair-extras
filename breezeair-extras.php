@@ -7,7 +7,7 @@
  * Author URI:      https://mwender.com
  * Text Domain:     breezeair-extras
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         1.0.0
  *
  * @package         BreezeAir_Extras
  */
