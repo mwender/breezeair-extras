@@ -9,6 +9,12 @@ function enqueue_scripts(){
 
   // Google Maps API
   wp_register_script( 'googlemaps', 'https://maps.googleapis.com/maps/api/js?key=' . GOOGLE_MAPS_API_KEY, null, '1.0', true );
-  wp_register_script( 'serviceareas', plugin_dir_url(__FILE__) . '../js/serviceareas.js', ['googlemaps'], filemtime( plugin_dir_path(__FILE__) . '../js/serviceareas.js'), true );
+  $serviceAreasTimeStamp = filemtime( plugin_dir_path(__FILE__) . '../js/serviceareas.js' );
+  wp_register_script( 'serviceareas', plugin_dir_url(__FILE__) . '../js/serviceareas.js', ['googlemaps'], $serviceAreasTimeStamp, true );
+  wp_localize_script( 'serviceareas', 'wpvars', [
+      'timeStamp' => $serviceAreasTimeStamp,
+      'pluginUrl' => BREEZE_DIR_URL,
+    ]
+  );
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_scripts' );
