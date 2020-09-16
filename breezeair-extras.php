@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:     BreezeAir Extras
- * Plugin URI:      PLUGIN SITE HERE
+ * Plugin URI:      https://github.com/mwender/breezeair-extras
  * Description:     Additional helpers for the breezeair.net website.
  * Author:          Michael Wender
  * Author URI:      https://mwender.com
@@ -15,5 +15,6 @@ define( 'BREEZE_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'BREEZE_DIR_URL', plugin_dir_url( __FILE__ ) );
 
 // Include required files
+require_once( 'lib/fns/acf.php' );
 require_once( 'lib/fns/enqueues.php' );
 require_once( 'lib/fns/shortcodes.php' );
