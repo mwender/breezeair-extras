@@ -3,13 +3,18 @@
 **Tags:** shortcode  
 **Requires at least:** 4.5  
 **Tested up to:** 5.5.1  
-**Stable tag:** 1.1.1  
+**Stable tag:** 1.2.0  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
 Various code extensions for the BreezeAir Networks website.
 
 ## Changelog ##
+
+### 1.2.0 ###
+* Adding KML/KMZ files to the Service Area repeater on the Options Page.
+* Storing KML/KMZ files in the WordPress media library.
+* Adding `uber_log()`.
 
 ### 1.1.1 ###
 * Disabling Google Street View controls for `[service_area_maps /]` shortcode.
