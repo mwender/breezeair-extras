@@ -22,12 +22,15 @@ function enqueue_scripts(){
       $latitude = get_sub_field( 'latitude' );
       $longitude = get_sub_field( 'longitude' );
       $zoom = get_sub_field( 'zoom' );
+      $kml = get_sub_field( 'kml' );
+      $kml_url = ( $kml['url'] )? $kml['url'] : null ;
       if( empty( $zoom ) )
         $zoom = 15;
       $service_areas[ $area_name ] = [
         'lat'   => floatval($latitude),
         'lng'   => floatval($longitude),
         'zoom'  => intval( $zoom ),
+        'kml'   => $kml_url,
       ];
     endwhile;
   }

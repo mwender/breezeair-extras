@@ -27,7 +27,7 @@
                     "name": "area_name",
                     "type": "text",
                     "instructions": "This should match the name of the associated KMZ file without the extension (e.g. <code>friendsville-road<\/code>, <code>meadow-road<\/code>, etc).",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "100",
@@ -46,7 +46,7 @@
                     "name": "latitude",
                     "type": "text",
                     "instructions": "Latitude we'll use for centering the map on this service area.",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "40",
@@ -65,7 +65,7 @@
                     "name": "longitude",
                     "type": "text",
                     "instructions": "Longitude we'll use for centering the map on this service area.",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "40",
@@ -98,6 +98,25 @@
                     "min": 1,
                     "max": 20,
                     "step": ""
+                },
+                {
+                    "key": "field_5f6348ea46c61",
+                    "label": "KML or Compressed KMZ",
+                    "name": "kml",
+                    "type": "file",
+                    "instructions": "Add your KML file here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "kml,kmz"
                 }
             ]
         }
@@ -119,5 +138,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1600279827
+    "modified": 1600342437
 }
