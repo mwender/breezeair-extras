@@ -18,20 +18,24 @@ function enqueue_scripts(){
   if( function_exists( 'have_rows') && have_rows( 'service_areas', 'option' ) ){
     $service_areas = [];
     while( have_rows( 'service_areas', 'option' ) ): the_row();
-      $area_name = get_sub_field( 'area_name' );
-      $latitude = get_sub_field( 'latitude' );
-      $longitude = get_sub_field( 'longitude' );
-      $zoom = get_sub_field( 'zoom' );
-      $kml = get_sub_field( 'kml' );
-      $kml_url = ( $kml['url'] )? $kml['url'] : null ;
-      if( empty( $zoom ) )
-        $zoom = 15;
+      // Get the Service Area group field
+      $service_area = get_sub_field( 'service_area' );
+
+      // Setup our variables
+      $area_name = $service_area['kml']['name'];
+      $kml_url = ( $service_area['kml']['url'] )? $service_area['kml']['url'] : null ;
+      $lat = floatval( $service_area['latitude'] );
+      $lng = floatval( $service_area['longitude'] );
+      $zoom = ( ! empty( $service_area['zoom'] ) && is_numeric( $service_area['zoom'] ) )? intval( $service_area['zoom'] ) : 15 ;
+
+      // Add the service area to the array
       $service_areas[ $area_name ] = [
-        'lat'   => floatval($latitude),
-        'lng'   => floatval($longitude),
-        'zoom'  => intval( $zoom ),
         'kml'   => $kml_url,
+        'lat'   => $lat,
+        'lng'   => $lng,
+        'zoom'  => $zoom,
       ];
+
     endwhile;
   }
   wp_localize_script( 'serviceareas', 'wpvars', [

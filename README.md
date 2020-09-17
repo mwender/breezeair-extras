@@ -3,13 +3,17 @@
 **Tags:** shortcode  
 **Requires at least:** 4.5  
 **Tested up to:** 5.5.1  
-**Stable tag:** 1.2.0  
+**Stable tag:** 1.2.1  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
 Various code extensions for the BreezeAir Networks website.
 
 ## Changelog ##
+
+### 1.2.1 ###
+* Re-organizing the layout of the Options Page service areas for greater ease-of-use.
+* Updating serviceareas.js to use the KMZ filename for the name of the service area.
 
 ### 1.2.0 ###
 * Adding KML/KMZ files to the Service Area repeater on the Options Page.
