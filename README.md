@@ -3,13 +3,16 @@
 **Tags:** shortcode  
 **Requires at least:** 4.5  
 **Tested up to:** 5.5.1  
-**Stable tag:** 1.2.1  
+**Stable tag:** 1.2.2  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
 Various code extensions for the BreezeAir Networks website.
 
 ## Changelog ##
+
+### 1.2.2 ###
+* Adding `maptype` attribute option to `[service_areas_map /]` shortcode for specifying the type of Google Map displayed (i.e. `roadmap`, `satellite`, `hybrid`, or `terrain`).
 
 ### 1.2.1 ###
 * Re-organizing the layout of the Options Page service areas for greater ease-of-use.
