@@ -7,7 +7,7 @@
  * Author URI:      https://mwender.com
  * Text Domain:     breezeair-extras
  * Domain Path:     /languages
- * Version:         1.2.2
+ * Version:         1.3.0
  *
  * @package         BreezeAir_Extras
  */
@@ -18,6 +18,13 @@ define( 'BREEZE_DIR_URL', plugin_dir_url( __FILE__ ) );
 require_once( 'lib/fns/acf.php' );
 require_once( 'lib/fns/enqueues.php' );
 require_once( 'lib/fns/shortcodes.php' );
+
+function add_upload_mimes($mimes) {
+  $mimes['kml'] = 'text/xml';
+  $mimes['kmz'] = 'application/zip';
+  return $mimes;
+}
+add_filter('upload_mimes', 'add_upload_mimes');
 
 if( ! function_exists( 'uber_log' ) ){
   /**
